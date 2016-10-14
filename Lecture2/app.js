@@ -1,4 +1,4 @@
-var students = {
+var student = {
   name: "",
   type: "student"
 };
@@ -9,7 +9,7 @@ without waiting for stylesheets, images, and subframes to finish loading
 document.addEventListener('DOMContentLoaded', contentLoaded); //document.addEventListener() method attaches an event handler to the document.
 
 function contentLoaded(event) {
-  document.getElementbyId('name').addEventListener("keyup", keyup); //The getElementById() method returns the element that has the ID attribute with the specified value
+  document.getElementById('name').addEventListener("keyup", keyup); //The getElementById() method returns the element that has the ID attribute with the specified value
 }
 
 function keyup(event) {
@@ -17,13 +17,13 @@ function keyup(event) {
 }
 function calculatorNumericOutput() {
   student.name = document.getElementById('name').value;
-}
+  var totalNameValue = 0;
 
-var totalNameValue = 0;
-for (var i = 0; i < student.name.length; i++) {
-  totalNameValue += student.name.charCodeAt(i);
-}
+  for (var i = 0; i < student.name.length; i++) {
+    totalNameValue += student.name.charCodeAt(i);
+  }
 
-//Insert result into page
-var output = "Total Numeric value of person's name is " + totalNameValue;
-document.getElementById('output').innerText=output;
+  //Insert result into page
+  var output = "Total Numeric value of person's name is " + totalNameValue;
+  document.getElementById('output').innerText=output;
+}

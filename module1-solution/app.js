@@ -7,7 +7,7 @@
 
   function LunchCheckController($scope) {
     var arrayOfStrings = "";
-
+    $scope.lunchmenu = "";
     $scope.check = function () {
       var lunchmenu = $scope.lunchmenu;
       if (lunchmenu != "") {

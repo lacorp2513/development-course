@@ -4,7 +4,8 @@
   angular.module('MsgApp', [])
   //declaracion del controlador
     .controller('MsgController', MsgController)
-    .filter('loves', LovesFilter);
+    .filter('loves', LovesFilter)
+    .filter('truth', TruthFilter);
 
 //Inyeccion de las dependencias
   MsgController.$inject = ['$scope', '$filter','lovesFilter'];
@@ -40,6 +41,13 @@
       input = input.replace("likes", "loves");
       return input;
     };
+  }
+  function TruthFilter(){
+    return function (input, target, replace){
+      input = input || "";
+      input = input.replace(target, replace);
+      return input;
+    }
   }
 
 })();

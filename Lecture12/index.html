@@ -16,7 +16,9 @@
     <div ng-controller="MsgController">
       Message is <br />
       Original: {{name}}, {{seyMessage()}}<br />
-      loves: {{sayLovesMessage()}}
+      loves: {{sayLovesMessage()}} <br />
+      Truth: {{sayLovesMessage() | truth : 'healthy' : 'cookie'}} <br />
+      BIG TRUTH {{sayLovesMessage() | truth: 'healthy' : 'cookie' | uppercase}}
       <div>
         <button ng-click="feedLuis()">Feed Yaakov</button>
         Cost: {{ cookieCost | currency : "#blah" : 4}}

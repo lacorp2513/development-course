@@ -9,6 +9,7 @@
   function CounterController($scope) {
     $scope.onceCounter = 0;
     $scope.counter = 0;
+    $scope.name="luis";
 
     $scope.showNumberofWatchers = function () {
       console.log("# of Watchers: ", $scope.$$watchersCount);

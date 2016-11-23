@@ -30,12 +30,9 @@
 
    function AlreadyBoughtController(ShoppingListCheckOffService) {
      var alreadyBoughtItems = this;
-     try {
+
        alreadyBoughtItems.items = ShoppingListCheckOffService.getBoughtItems();
-     } catch (error) {
-       alreadyBoughtItems.error = error.message;
-       console.log("error asdf");
-     }
+
 
 
 

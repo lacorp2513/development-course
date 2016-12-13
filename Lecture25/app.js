@@ -18,6 +18,7 @@
     .catch(function (error) {
       console.log("Something went terribly wrong.");
     });
+    
     menu.logMenuItems = function (shortName) {
       var promise = MenuCategoriesService.getMenuForCategory(shortName);
 

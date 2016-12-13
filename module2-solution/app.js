@@ -100,7 +100,7 @@
     };
 
     service.addBouhtItems = function ($index) {
-
+      
         boughtItems.push(toBuyItems[$index]);
 
     };
